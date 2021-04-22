@@ -176,13 +176,14 @@ if (chrome.browserAction) {
   });
 }
 
-chrome.runtime.onInstalled.addListener(() => {
-  chrome.contextMenus.create({
-    id: 'mobx-devtools',
-    title: 'Open Mobx DevTools',
-    contexts: ['all'],
-  });
-});
+// disable chrome context menu
+// chrome.runtime.onInstalled.addListener(() => {
+//   chrome.contextMenus.create({
+//     id: 'mobx-devtools',
+//     title: 'Open Mobx DevTools',
+//     contexts: ['all'],
+//   });
+// });
 
 chrome.runtime.onConnect.addListener(port => {
   let tab = null;
